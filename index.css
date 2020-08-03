@@ -121,7 +121,7 @@ h1 {
 
 .submitWrap input:focus {
     outline: none;
-    letter-spacing: 7px;
+    letter-spacing: 5px;
 }
 
 .submitWrap input:focus::placeholder {
@@ -144,6 +144,7 @@ h1 {
     background-color: #00723b;
     text-align: center;
     font-size: 18px;
+    letter-spacing: 5px;
 }
 
 .scoreTable .th {
