@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Number Baseball Game</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!--Background-->
+    <div class="bg"></div>
+    <!--Opening Wrap-->
+    <div class="js-openingWrap openingWrap">
+        <h1 class="numBaseball">Number Baseball</h1>
+        <h1 class="game">Game</h1>
+        <h1 class="js-startBtn startBtn">Start Game</h1>
+    </div>
+    <!--Game Wrap-->
+    <div class="js-gameWrap gameWrap">
+        <!--Game Condition-->
+        <div class="gameCondition">
+            <h1 class="js-condition condition">Condition</h1>
+        </div>
+        <!--Submit Wrap-->
+        <div class="submitWrap">
+            <form class="js-numForm numForm">
+                <input type="text" placeholder="Write an answer." />
+            </form>
+        </div>
+        <!--Score Board-->
+        <div class="scoreBoard">
+            <table class="js-scoreTable scoreTable">
+                <tr class="th">
+                    <th>TRY</th>
+                    <th>NUMBER</th>
+                    <th>STRIKE</th>
+                    <th>BALL</th>
+                    <th>OUT</th>
+                </tr>
+                <tr class="td">
+                    <td class="js-try">1</td>
+                    <td class="js-num">1234</td>
+                    <td class="js-S">1</td>
+                    <td class="js-B">1</td>
+                    <td class="js-O">2</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!--JavaScript-->
+    <script src="start.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+/*Default
+*/
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-image: url(bgImg.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    margin: 0;
+    color: white;
+}
+/*Opening Wrap
+*/
+.openingWrap {
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    left: 50%;
+    margin-left: -600px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.numBaseball {
+    position: absolute;
+    width: 1000px;
+    height: 135px;
+    top: 27%;
+    left: 50%;
+    margin-left: -500px;
+    font-size: 100px;
+    text-align: center;
+    color: white;
+}
+
+.game {
+    position: absolute;
+    width: 500px;
+    height: 135px;
+    top: 42%;
+    left: 50%;
+    margin-left: -250px;
+    font-size: 100px;
+    text-align: center;
+    color: white;
+}
+
+.startBtn {
+    position: absolute;
+    width: 200px;
+    height: 45px;
+    top: 70%;
+    left: 50%;
+    margin-left: -100px;
+    border: solid 3px white;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+/*Game Wrap
+*/
+.gameWrap {
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    left: 50%;
+    margin-left: -600px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*Game Condition
+*/
+.gameCondition {
+    position: absolute;
+    width: 350px;
+    height: 100px;
+    left: 50%;
+    margin-left: -175px;
+    margin-top: 35px;
+}
+
+.condition {
+    font-size: 70px;
+    text-align: center;
+}
+
+/*Submit Wrap
+*/
+.submitWrap {
+    position: absolute;
+    width: 212px;
+    height: 36px;
+    left: 50%;
+    margin-left: -106px;
+    margin-top: 170px;
+    background-color: white;
+}
+
+.submitWrap input {
+    position: absolute;
+    width: 200px;
+    height: 25px;
+    left: 50%;
+    margin-left: -104px;
+    top: 50%;
+    margin-top: -16px;
+    border: dashed 2px red;
+    padding: 2px 2px 1px 2px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.submitWrap input:focus {
+    outline: none;
+    letter-spacing: 7px;
+}
+
+.submitWrap input:focus::placeholder {
+    color: transparent;
+}
+
+/*Score Board
+*/
+.scoreBoard {
+    position: absolute;
+    width: 600px;
+    left: 50%;
+    margin-left: -300px;
+    margin-top: 250px;
+}
+
+.scoreTable {
+    position: absolute;
+    width: 600px;
+    background-color: #00723b;
+    text-align: center;
+    font-size: 18px;
+}
+
+.scoreTable .th {
+    color: white;
+}
+
+.scoreTable th {
+    border: solid 5px #00723b;
+}
+
+.scoreTable .td {
+    color: red;
+}
+
+.scoreTable td {
+    border: solid 5px #00723b;;
+    background-color: black;
+}
+
+/*JavaScript Control
+*/
+.openingWrap,
+.gameWrap {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
