@@ -1,3 +1,4 @@
+const condition = document.querySelector(".js-condition");
 const numForm = document.querySelector(".js-numForm");
 const numInput = numForm.getElementsByTagName("input")[0];
 const scoreTable = document.querySelector(".js-scoreTable");
@@ -33,28 +34,29 @@ function getS(num) {
 }
 
 function getResult(num) {
+    count = count + 1;
+    const tr = document.createElement("tr");
+    const inningTd = document.createElement("td");
+    const numTd = document.createElement("td");
+    const sTd = document.createElement("td")
+    const bTd = document.createElement("td")
+    const oTd = document.createElement("td")
+    tr.classList.add("td");
+    inningTd.innerText = count;
+    numTd.innerText = num;
+    sTd.innerText = getS(num);
+    bTd.innerText = getB(num);
+    oTd.innerText = 4 - (getS(num) + getB(num));
+    tr.appendChild(inningTd);
+    tr.appendChild(numTd);
+    tr.appendChild(sTd);
+    tr.appendChild(bTd);
+    tr.appendChild(oTd);
+    scoreTable.appendChild(tr);
     if (num !== ranNum) {
-        count = count + 1;
-        const tr = document.createElement("tr");
-        const tryTd = document.createElement("td");
-        const numTd = document.createElement("td");
-        const sTd = document.createElement("td")
-        const bTd = document.createElement("td")
-        const oTd = document.createElement("td")
-        tr.classList.add("td");
-        tryTd.innerText = count;
-        numTd.innerText = num;
-        sTd.innerText = getS(num);
-        bTd.innerText = getB(num);
-        oTd.innerText = 4 - (getS(num) + getB(num));
-        tr.appendChild(tryTd);
-        tr.appendChild(numTd);
-        tr.appendChild(sTd);
-        tr.appendChild(bTd);
-        tr.appendChild(oTd);
-        scoreTable.appendChild(tr);
+        condition.innerText = `${count + 1} inning`;
     } else {
-        console.log("Congrats! You won the game!\n" + `The answer was ${ranNum}`);
+        condition.innerText = `Congrats! You won the game!\nThe answer was ${ranNum}!`;
         numForm.removeEventListener("submit", handleSubmitNum);
         numInput.blur();
         submitWrap.classList.remove(SHOWING_CLASS);
@@ -94,14 +96,13 @@ function handleSubmitNum(event) {
             numInput.value = "";
         } else {
             const receivedStrs = receivedStr.split("");
-            if (
-                receivedStrs[0] !== receivedStrs[1] &&
+            if (receivedStrs[0] !== receivedStrs[1] &&
                 receivedStrs[0] !== receivedStrs[2] &&
                 receivedStrs[0] !== receivedStrs[3] &&
                 receivedStrs[1] !== receivedStrs[2] &&
                 receivedStrs[1] !== receivedStrs[3] &&
-                receivedStrs[2] !== receivedStrs[3]
-            ) {
+                receivedStrs[2] !== receivedStrs[3])
+            {
                 zero = false;
                 for (let i = 0; i < 4; i++) {
                     if (receivedStr.charAt(i) === "0") {
@@ -128,6 +129,7 @@ function handleSubmitNum(event) {
 
 function init() {
     numForm.addEventListener("submit", handleSubmitNum);
+    condition.innerText = "1 inning";
     console.log(ranNum);
 }
 init();
