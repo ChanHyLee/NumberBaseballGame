@@ -130,6 +130,5 @@ function handleSubmitNum(event) {
 function init() {
     numForm.addEventListener("submit", handleSubmitNum);
     condition.innerText = "1 inning";
-    console.log(ranNum);
 }
 init();
