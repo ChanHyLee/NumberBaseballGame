@@ -186,6 +186,10 @@ p {
     background-color: #c1c1c1;
 }
 
+::-webkit-scrollbar-thumb:active {
+    background-color: darkgray;
+}
+
 .scoreTable {
     position: absolute;
     width: 600px;
