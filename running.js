@@ -1,3 +1,5 @@
+'use strict';
+
 const condition = document.querySelector(".js-condition");
 const numForm = document.querySelector(".js-numForm");
 const numInput = numForm.getElementsByTagName("input")[0];
@@ -66,8 +68,7 @@ function getResult(num) {
 function filtering(str) {
     const items = str.split("");
     for (let i = 0; i < items.length; i++) {
-        if (
-            Number(items[i]) === 0 ||
+        if (Number(items[i]) === 0 ||
             Number(items[i]) === 1 ||
             Number(items[i]) === 2 ||
             Number(items[i]) === 3 ||
@@ -76,8 +77,8 @@ function filtering(str) {
             Number(items[i]) === 6 ||
             Number(items[i]) === 7 ||
             Number(items[i]) === 8 ||
-            Number(items[i]) === 9
-        ) {
+            Number(items[i]) === 9)
+        {
             return Number(str);
         } else {
             return null;
@@ -127,8 +128,7 @@ function handleSubmitNum(event) {
     }
 }
 
-function init() {
+(function() {
     numForm.addEventListener("submit", handleSubmitNum);
     condition.innerText = "1 inning";
-}
-init();
+})();
